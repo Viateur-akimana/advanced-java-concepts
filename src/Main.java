@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -12,13 +13,19 @@ public class Main {
         districts.add(56);
         districts.add(67);
         districts.add(68);
-        districts.add(0,9);
+        districts.add(1,9);
+        Collections.sort(districts);
 //        Iterator i = districts.iterator();
 //     while (i.hasNext()) {
 //         System.out.println(i.next());
 //     }
-for (Integer dis:districts){
-    System.out.println(dis);
-}
+//for (Integer dis:districts){
+//    System.out.println(dis);
+//}
+
+//        districts.forEach(dis->{
+//            System.out.println(dis);
+//        });
+        districts.forEach(System.out::println);
     }
 }
