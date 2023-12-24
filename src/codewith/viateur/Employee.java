@@ -58,6 +58,19 @@ public class Employee implements Comparable<Employee>{
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return age == employee.age && salary == employee.salary && Objects.equals(lastname, employee.lastname) && Objects.equals(firstname, employee.firstname) && Objects.equals(position, employee.position);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(lastname, firstname, position, age, salary);
+    }
+
+    @Override
     public int compareTo(Employee otherEmployee) {
         int lastNameComparison = this.lastname.compareTo(otherEmployee.lastname);
         if (lastNameComparison == 0) {
