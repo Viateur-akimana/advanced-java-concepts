@@ -5,8 +5,8 @@ public class ConnectionDemo {
         String url = "jdbc:mysql://localhost:3306/student";
         String username = "root";
         String password = "";
-//        String sql = "INSERT INTO student (code, name, age, school) " +
-//                "VALUES (34, 'John Doe', 20, 'XYZ School')";
+        String sql = "INSERT INTO student (code, name, age, school) " +
+                "VALUES (34, 'John Doe', 20, 'XYZ School')";
 
         String sql = "SELECT * FROM student";
 
